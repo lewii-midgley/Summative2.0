@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+  position: relative;
+  overflow-x: hidden;
+  }
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    font-size: 65.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+ul{
+    list-style: none;
+}

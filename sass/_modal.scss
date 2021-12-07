@@ -1,0 +1,420 @@
+@import "var";
+
+.modal-body{
+    border: 1px solid #0E0E0E;
+}
+
+.bookingModal-header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #03ABDD;
+
+    &__title{
+        color: white;
+        padding-top: 2.2vh;
+        padding-left: 39.5%;
+        text-align: center;
+        font-family: 'Neucha', cursive;
+        font-weight: 400;
+        letter-spacing: 0.15rem;
+        font-size: 2.6rem;
+    }
+
+    &__button{
+        margin-right: 2rem;
+        font-size: 3rem;
+
+    }
+}
+
+.bookingModal-footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--button{
+        font-size: 1.4rem;
+        background: #03ABDD;
+        color: white;
+        border: 2px solid #03ABDD;
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 1rem;
+    }
+
+    &--button:hover{
+        background: white;
+        color: #03ABDD;
+        border: 2px solid #03ABDD;
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 1rem;
+    }
+
+    &--button:focus{
+        outline: 0;
+    }
+}
+
+
+.modalContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--left{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 60vh;
+        width: 100%;
+        border: 1px solid #0E0E0E;
+        border-radius: 2rem;
+
+
+        &__header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            width: 100%;
+
+            text-align: center;
+            font-family: 'Neucha', cursive;
+            font-weight: 400;
+            letter-spacing: 0.15rem;
+            font-size: 3.2rem;
+            color: #0E0E0E;
+        }
+
+        &__dates{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            height: 10vh;
+            width: 100%;
+
+            &--date{
+                border: 1px solid #0E0E0E;;
+                border-radius: 0.6rem;
+                padding: 1.2rem;
+                text-align: center;
+                font-size: 1.6rem;
+                font-family: 'nationalRegular';
+                letter-spacing: 0.08rem;
+                color: #0E0E0E;
+            }
+        }
+
+        &__locations{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            height: 10vh;
+            width: 100%;
+
+            &--location{
+                border: 1px solid #0E0E0E;;
+                border-radius: 0.6rem;
+                padding: 1.2rem;
+                text-align: center;
+                font-size: 1.6rem;
+                font-family: 'nationalRegular';
+                letter-spacing: 0.08rem;
+                color: #0E0E0E;
+            }
+        }
+
+        &__carContainer{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 20vh;
+            width: 100%;
+
+            &--car{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 1rem; 
+
+                &__img{
+                height: 80%;
+                }
+            }
+
+            &--right{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+
+                &__nameVehicle{
+                    height: 30%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                    font-family: 'Neucha', cursive;
+                    font-weight: 400;
+                    letter-spacing: 0.15rem;
+                    font-size: 2.6rem;
+                    color: #0E0E0E;
+                }
+
+                &__description{
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                    font-size: 1.7rem;
+                    font-family: 'nationalRegular';
+                    letter-spacing: 0.02rem;
+                    color: #0E0E0E;
+                }
+
+                &__description3{
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                    font-size: 1.7rem;
+                    font-family: 'nationalRegular';
+                    letter-spacing: 0.02rem;
+                    color: #0E0E0E;
+                }
+            }
+        }
+
+        &__totals{
+            height: 10vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--left{
+                height: 10vh;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
+
+            &--right{
+                height: 10vh;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            &--textTop{
+                text-align: center;
+                font-family: 'Neucha', cursive;
+                font-weight: 400;
+                letter-spacing: 0.1rem;
+                font-size: 2.2rem;
+                color: #0E0E0E;
+            }
+
+            &--text{
+                text-align: center;
+                font-size: 2rem;
+                font-family: 'nationalRegular';
+                letter-spacing: 0.08rem;
+                color: #0E0E0E;
+            }
+        }
+    }
+
+    &--right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+#map{
+    height: 65%;
+    width: 80%;
+    background: lightcoral;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+#mapRoute{
+    height: 27%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'nationalRegular';
+    letter-spacing: 0.05rem;
+    color: #0E0E0E;
+}
+
+
+
+// Media Queries
+
+
+@media #{$mobileModal}{
+
+    .bookingModal-header{
+
+        &__title{
+            padding-left: 25%;
+        }
+    }
+
+    .modalContainer{
+        flex-direction: column;
+
+        &--left{
+
+            border: none;
+
+            &__dates{
+                &--date{
+                    border: none;
+                }
+            }
+    
+            &__locations{
+                &--location{
+                    border: none;
+                }
+            }
+        }
+
+        &--right{
+            margin-top: 2rem;
+        }
+    }
+}
+
+
+
+
+@media #{$tabletModal}{
+
+    .bookingModal-header{
+        &__title{
+            padding-left: 35%;
+        }
+    }
+
+    .modalContainer{
+
+        &--left{
+
+            &__header{
+                font-size: 3rem;
+    
+            }
+    
+            &__dates{
+    
+                &--date{
+                    font-size: 1.4rem;
+                    border: none;
+                }
+            }
+    
+            &__locations{
+
+                &--location{
+                    border: none;
+                    font-size: 1.4rem;
+                }
+            }
+    
+            &__carContainer{
+
+                &--car{
+                    padding-left: 0.5rem; 
+    
+                    &__img{
+                    height: 60%;
+                    }
+                }
+    
+                &--right{
+
+                    &__nameVehicle{
+                        padding-bottom: 2rem;
+                        font-size: 2.2rem;
+                    }
+    
+                    &__description{
+                        padding-top: 0.2rem;
+                        padding-bottom: 0.2rem;
+                        font-size: 1.4rem;
+                        padding-left: 0;
+                        margin-left: 0;
+                    }
+
+                    &__description3{
+                        display: none;
+                    }
+                }
+            }
+    
+    
+            &__totals{
+
+                &--textTop{
+                    font-size: 2rem;
+                }
+    
+                &--text{
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    .descriptionIcon{
+        padding-left: 1.8rem;
+        padding-right: 1.2rem;
+    }
+
+    #map{
+        width: 85%;
+    }
+    
+    #mapRoute{
+        height: 27%;
+        width: 85%;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+

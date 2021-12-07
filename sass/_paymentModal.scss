@@ -1,0 +1,305 @@
+@import "var";
+
+// Payment Modal
+
+.modalPayment-dialog{
+    height: 60vh;
+    width: 50vh;
+    z-index: 1;
+}
+
+
+.modalPayment-header{
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(111, 118, 124);
+
+    &__title{
+        color: white;
+        padding-top: 2.2vh;
+        text-align: center;
+        font-family: 'Neucha', cursive;
+        font-weight: 400;
+        letter-spacing: 0.15rem;
+        font-size: 2.6rem;
+        padding-left: 38%;
+    }
+
+    &__titleFinal{
+        color: white;
+        padding-top: 2.2vh;
+        text-align: center;
+        font-family: 'Neucha', cursive;
+        font-weight: 400;
+        letter-spacing: 0.15rem;
+        font-size: 2.6rem;
+        padding-left: 45%;
+    }
+
+    &__button{
+        color: black;
+        margin-left: 3rem;
+        font-size: 5rem;
+        cursor: pointer;
+    }
+}
+
+
+.modalPaymentContainer{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+
+    &--form{
+        height: 90%;
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        &__logos{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 2.4rem;
+
+            &--logo{
+                height: 5rem;
+            }
+        }
+
+        &__info{
+            padding-left: 0.2rem;
+        }
+
+        &__paymentTitle{
+            margin-bottom: 1.4rem;
+        }
+
+        &__bottomRow{
+            height: 3.5vh;
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+
+            &--input{
+                width: 162%;
+                height: 100%;
+                border: 2px solid black;
+                border-radius: 0.4rem;
+                padding-left: 1rem;
+                background: rgb(240, 240, 240);
+                font-size: 1.2rem;
+            }
+
+            &--input2{
+                width: 89%;
+                height: 100%;
+                border: 2px solid black;
+                border-radius: 0.4rem;
+                padding-left: 1rem;
+                background: rgb(240, 240, 240);
+                margin-left: 13rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        &__input{
+            width: 100%;
+            height: 7%;
+            border: 2px solid black;
+            border-radius: 0.4rem;
+            margin-bottom: 2rem;
+            background: rgb(240, 240, 240);
+            padding-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        &__button{
+            width: 100%;
+            background: black;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 3rem;
+            border: 2px solid black;
+            border-radius: 0.3rem;
+        }
+
+        &__button:focus{
+            outline: 0;
+        }
+    }
+}
+
+.modalPayment-footer{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--button{
+        font-size: 1.8rem;
+        background: white;
+        color: black;
+    }
+}
+
+
+.bookingComplete{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &--header{
+        color: #0E0E0E;
+        text-align: center;
+        font-size: 3.6rem;
+        font-family: 'Neucha', cursive;
+        font-weight: 400;
+        letter-spacing: 0.15rem;
+        padding-bottom: 4rem;
+    }
+
+    &--subText{
+        color: #0E0E0E;
+        text-align: center;
+        font-size: 2.4rem;
+        font-family: 'nationalRegular';
+        letter-spacing: 0.08rem;
+        padding-bottom: 8rem;
+    }
+
+    &--button{
+        color: white;
+        background: #03ABDD;
+        border: 2px solid #03ABDD;
+        padding: 1.2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.7rem;
+        font-family: 'nationalRegular';
+        letter-spacing: 0.1rem;
+    }
+
+    &--button:hover{
+        color: rgb(66, 143, 216);
+        background: white;
+        border: 2px solid #03ABDD;
+        padding: 1.2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        text-align: center;
+        font-family: 'nationalRegular';
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+
+
+
+// Media Queries
+
+
+@media #{$mobileModal}{
+
+    .modalPayment-header{
+
+        &__title{
+            padding-left: 26%;
+        }
+    }
+
+    .modalPaymentContainer{
+
+        height: 74vh;
+
+        &--form{
+            width: 80%;
+
+            &__bottomRow{
+
+                &--input{
+                    width: 105%;
+                    height: 100%;
+                    border: 2px solid black;
+                    border-radius: 0.4rem;
+                    padding-left: 1rem;
+                    background: rgb(240, 240, 240);
+                    font-size: 1.2rem;
+                }
+    
+                &--input2{
+                    width: 81%;
+                    height: 100%;
+                    border: 2px solid black;
+                    border-radius: 0.4rem;
+                    padding-left: 1rem;
+                    background: rgb(240, 240, 240);
+                    margin-left: 4.8rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media #{$tabletModal}{
+
+    .modalPayment-header{
+
+        &__title{
+            padding-left: 35%;
+        }
+    }
+
+    .modalPaymentContainer{
+
+        &--form{
+
+            &__bottomRow{
+
+                &--input{
+                    width: 110%;
+                    height: 100%;
+                    border: 2px solid black;
+                    border-radius: 0.4rem;
+                    padding-left: 1rem;
+                    background: rgb(240, 240, 240);
+                    font-size: 1.2rem;
+                }
+    
+                &--input2{
+                    width: 83%;
+                    height: 100%;
+                    border: 2px solid black;
+                    border-radius: 0.4rem;
+                    padding-left: 1rem;
+                    background: rgb(240, 240, 240);
+                    margin-left: 5rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+

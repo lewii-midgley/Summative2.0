@@ -1,0 +1,47 @@
+@import "../bootstrap-4.5.3/scss/bootstrap.scss";
+@import "resets";
+@import "mixins";
+@import "navBar";
+@import "landingPage";
+@import "vehicleCards";
+@import "modal";
+@import "var";
+@import "paymentModal";
+
+.backgroundImage{
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/background.jpg);
+    @include background-opacity;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+
+
+@mixin background-opacity {
+    background-color: rgb(150, 150, 150);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@mixin background-opacity-nav {
+    background-color: rgb(150, 150, 150);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+@font-face{
+    font-family: 'nationalMedium';
+    src: url('../UX/national-medium.otf') format('opentype');
+}
+
+@font-face{
+    font-family: 'nationalRegular';
+    src: url('../UX/national-regular.otf') format('opentype');
+}
