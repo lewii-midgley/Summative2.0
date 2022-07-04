@@ -3,44 +3,42 @@
 // Payment Modal
 
 .modalPayment-dialog{
-    height: 60vh;
-    width: 50vh;
+    height: 60rem;
     z-index: 1;
 }
 
 
 .modalPayment-header{
-    height: 10vh;
+    height: 10rem;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background: rgb(111, 118, 124);
 
     &__title{
         color: white;
-        padding-top: 2.2vh;
+        padding-top: 2.2rem;
         text-align: center;
         font-family: 'Neucha', cursive;
         font-weight: 400;
         letter-spacing: 0.15rem;
         font-size: 2.6rem;
-        padding-left: 38%;
+        padding-left: 35.4%;
+        padding-right: 40%;
     }
 
     &__titleFinal{
         color: white;
-        padding-top: 2.2vh;
+        padding-top: 2.2rem;
         text-align: center;
         font-family: 'Neucha', cursive;
         font-weight: 400;
         letter-spacing: 0.15rem;
         font-size: 2.6rem;
-        padding-left: 45%;
     }
 
     &__button{
         color: black;
-        margin-left: 3rem;
         font-size: 5rem;
         cursor: pointer;
     }
@@ -48,7 +46,7 @@
 
 
 .modalPaymentContainer{
-    height: 60vh;
+    height: 60rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,7 +83,7 @@
         }
 
         &__bottomRow{
-            height: 3.5vh;
+            height: 3.8rem;
             width: 100%;
             display: flex;
             justify-content: flex-start;
@@ -142,7 +140,7 @@
 }
 
 .modalPayment-footer{
-    height: 10vh;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,37 +177,22 @@
         font-size: 2.4rem;
         font-family: 'nationalRegular';
         letter-spacing: 0.08rem;
-        padding-bottom: 8rem;
+        padding-bottom: 5rem;
     }
 
-    &--button{
-        color: white;
-        background: #03ABDD;
-        border: 2px solid #03ABDD;
-        padding: 1.2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        border-radius: 2rem;
+    &--h3{
+        color: #03ABDD;
         cursor: pointer;
         text-align: center;
-        font-size: 1.7rem;
-        font-family: 'nationalRegular';
+        font-size: 1.8rem;
+        font-family: 'nationalMedium';
         letter-spacing: 0.1rem;
+        text-decoration: underline;
     }
 
-    &--button:hover{
-        color: rgb(66, 143, 216);
-        background: white;
-        border: 2px solid #03ABDD;
-        padding: 1.2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        border-radius: 2rem;
-        cursor: pointer;
-        text-align: center;
-        font-family: 'nationalRegular';
-        font-size: 1.7rem;
-        letter-spacing: 0.1rem;
+    &--img{
+        padding-bottom: 5rem;
+        height: 14rem;
     }
 }
 
@@ -224,13 +207,20 @@
     .modalPayment-header{
 
         &__title{
-            padding-left: 26%;
+            padding-left: 21%;
+        }
+
+        &__button{
+            color: black;
+            font-size: 4rem;
+            cursor: pointer;
+            margin-left: 5rem;
         }
     }
 
     .modalPaymentContainer{
 
-        height: 74vh;
+        height: 73rem;
 
         &--form{
             width: 80%;
@@ -239,7 +229,7 @@
 
                 &--input{
                     width: 105%;
-                    height: 100%;
+                    height: 115%;
                     border: 2px solid black;
                     border-radius: 0.4rem;
                     padding-left: 1rem;
@@ -249,7 +239,7 @@
     
                 &--input2{
                     width: 81%;
-                    height: 100%;
+                    height: 115%;
                     border: 2px solid black;
                     border-radius: 0.4rem;
                     padding-left: 1rem;
@@ -260,7 +250,21 @@
             }
         }
     }
+
+    .bookingComplete{
+    
+        &--header{
+            padding: 2rem;
+        }
+    
+        &--subText{
+            padding-bottom: 10rem;
+            padding: 2rem;
+        }
+    }
 }
+
+
 
 
 @media #{$tabletModal}{
@@ -268,7 +272,8 @@
     .modalPayment-header{
 
         &__title{
-            padding-left: 35%;
+            padding-left: 33.4%;
+            padding-right: 40%;
         }
     }
 

@@ -1,11 +1,8 @@
 console.log("Hello i am linked");
 
 const scroll = document.getElementById("vehicleButtonScroll");
-
 const vehicleFilterBtn = document.querySelector('#vehicleFilterBtn');
-
 const payment = document.querySelector('#paymentButton');
-
 let script = '<script src="https://maps.googleapis.com/maps/api/js?key=' + key +'&callback=initMap&libraries=places&v=weekly" async defer >';
 
 $(document).ready(function(){
@@ -145,7 +142,7 @@ let vehicleArray = [
         id: 09,
         vehicleName: 'Motorhome',
         type: 'motorhome',
-        image:'./img/home2.png',
+        image:'./img/camp.png',
         description: '<i class="fas fa-cog descriptionIcon"></i> Manual 5 speed',
         description2: '<i class="fas fa-suitcase-rolling descriptionIcon"></i> 4 Suitcases',
         description3: '<i class="fas fa-temperature-low descriptionIcon"></i>A/C <i class="fas fa-satellite-dish descriptionIcon"></i>Sat Nav',
@@ -329,7 +326,7 @@ function modal(checkIn, checkOut, pickedUp, droppedOff, totalDays, distanceKM){
                     <div class="modalContainer--left__totals--right">
 
                     <h2 class="modalContainer--left__totals--textTop">Total Fuel Consumption:</h2>
-                    <h2 class="modalContainer--left__totals--text">${((distanceKM/100) * vehicleArray[i].litresPerKmCalc)}L</h2>
+                    <h2 class="modalContainer--left__totals--text">${((distanceKM/100) * vehicleArray[i].litresPerKmCalc).toFixed(2)}L</h2>
 
                     </div>
 
@@ -352,7 +349,7 @@ function generateVehicle(x){
     let price;
 
     if(curr == "AUD"){
-        price = (vehicleArray[x].pricePerDay * 0.96).toFixed(2);
+        price = (vehicleArray[x].pricePerDay * 0.91).toFixed(0);
     } else{
         price = vehicleArray[x].pricePerDay;
     }
@@ -361,10 +358,11 @@ function generateVehicle(x){
         `
         <div class="cardContent--card">
 
-        <div class="cardContent--vehicleContainer">
 
-            <img class="cardContent--vehicleContainer__img" src="${vehicleArray[x].image}" alt="Vehicle Image">
+        <div class="cardContent--vehicleContainer">
+        <img class="cardContent--vehicleContainer__img" src="${vehicleArray[x].image}" alt="Vehicle Image">
         </div>
+
 
         <div class="cardContent--informationContainer">
 
@@ -409,7 +407,7 @@ function generateNone(){
 
         <h1 class="cardContent--nonText__h1">Sorry we don't currently have any vehicles that fit your search!</h1>
 
-        <a href="index.html"><button class="cardContent--nonText__button">Search Again</button></a>
+        <a href="index.html"><h3 class="cardContent--nonText__h3">Try Again</h3></a>
 
     </div>
         `
@@ -447,10 +445,13 @@ function checkInData(daysBooked, peopleBooked){
     const cardHolder = document.querySelector(".cardContent");
     let i = 0; 
     for(i = 0; i < vehicleArray.length; i++){
+        
         if((daysBooked >= vehicleArray[i].minDay) && (daysBooked <= vehicleArray[i].maxDay) && (peopleBooked >= vehicleArray[i].minPerson) && (peopleBooked <= vehicleArray[i].maxPerson)){
             
             generateVehicle(i);
         }
+
+        // generateVehicle(i);
     }
     if(cardHolder.childNodes.length == 0){
         generateNone();
@@ -540,10 +541,13 @@ function paymentComplete(){
 
             `
             <div class="bookingComplete">
-            <h1 class="bookingComplete--header">Thank you for booking with us ${userName}!</h1>
+
+            <img class="bookingComplete--img" src="./img/tick.png" alt="">
+            
+            <h1 class="bookingComplete--header">Thank you for booking with us ${userName + "!"}</h1>
             <h3 class="bookingComplete--subText">An Email has been sent to you with your booking itinery</h3>
 
-            <a href="index.html"><button class="bookingComplete--button">Back to Home</button></a>
+            <a href="index.html"><h3 class="bookingComplete--h3">Back to Home</h3></a>
 
             </div>
             `

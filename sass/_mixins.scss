@@ -28,13 +28,17 @@
     z-index: -1;
 }
 
+@font-face{
+    font-family: 'purePakati';
+    src: url('../Fonts/PurePakati-Regular.otf') format('opentype');
+}
 
 @font-face{
     font-family: 'nationalMedium';
-    src: url('../UX/national-medium.otf') format('opentype');
+    src: url('../Fonts/national-medium.otf') format('opentype');
 }
 
 @font-face{
     font-family: 'nationalRegular';
-    src: url('../UX/national-regular.otf') format('opentype');
+    src: url('../Fonts/national-regular.otf') format('opentype');
 }

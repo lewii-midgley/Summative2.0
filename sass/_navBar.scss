@@ -1,7 +1,7 @@
 @import "var";
 
 .navBar{
-    height: 15vh;
+    height: 13rem;
     width: 100vw;
     position: fixed;
     display: flex;
@@ -37,16 +37,18 @@
         padding-right: 10rem;
 
         &__box{
-            height: 3.4rem;
+            height: 3rem;
             width: 6rem;
-            color: white;
-            background: #2e2e2e;
-            border: 0.6px solid white;
-            border-radius: 1rem;
+            color: black;
+            background: white;
+            border-radius: 0rem;
             padding-left: 0.4rem;
             font-size: 1.3rem;
             font-family: 'nationalRegular';
-            letter-spacing: 0.08rem;
+            letter-spacing: 0.1rem;
+            border: none;
+
+            margin-bottom: 0.2rem;
         }
 
         &__box:focus{
@@ -66,12 +68,46 @@
 }
 
 
+@media #{$limit}{
+
+    .navBar{
+        display: none;
+    }
+}
+
+
 @media #{$mobile}{
 
     .navBar{
-  
+        justify-content: center;
+
+        &--spaceFiller{
+            display: none;
+        }
+    
         &--currency{
-            padding-right: 4rem;
+            display: none;
         }
     }
 }
+
+
+
+
+@media #{$tablet}{
+
+    .navBar{
+        justify-content: center;
+
+        &--spaceFiller{
+            display: none;
+        }
+    
+        &--currency{
+            display: none;
+        }
+    }
+}
+
+
+
